@@ -1,0 +1,13 @@
+{
+  "name": "bower-dev-dependency-only-probe",
+  "version": "1.0.0",
+  "description": "Bower probe: dependencies vs devDependencies group classification",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "jasmine-core": "^4.0.0",
+    "mocha": "^10.0.0"
+  }
+}

@@ -1,0 +1,72 @@
+{
+    "schema_version": "1.0",
+    "pm": "bower",
+    "pm_version_tested": "1.8",
+    "source_file": "bower.json",
+    "manifest": "bower.json",
+    "lockfile": null,
+    "detection_mode": "manifest-only",
+    "patterns": ["dev-dependency-only"],
+    "notes": "jquery is the sole production dependency (group: main). jasmine-core and mocha are declared under devDependencies (group: dev). Bower does not install transitive devDependencies, so no transitive packages are expected. Placeholder versions: actual resolved versions to be filled in by tree-builder after real bower install.",
+    "packages": [
+        {
+            "name": "jquery",
+            "artifactId": "jquery",
+            "version": "3.7.1",
+            "version_constraint": "^3.6.0",
+            "scope": "runtime",
+            "group": "main",
+            "source": "registry",
+            "direct": true,
+            "children": []
+        },
+        {
+            "name": "jasmine-core",
+            "artifactId": "jasmine-core",
+            "version": "4.6.1",
+            "version_constraint": "^4.0.0",
+            "scope": "development",
+            "group": "dev",
+            "source": "registry",
+            "direct": true,
+            "children": []
+        },
+        {
+            "name": "mocha",
+            "artifactId": "mocha",
+            "version": "10.7.3",
+            "version_constraint": "^10.0.0",
+            "scope": "development",
+            "group": "dev",
+            "source": "registry",
+            "direct": true,
+            "children": []
+        }
+    ],
+    "total_packages": 3,
+    "direct_count": 3,
+    "transitive_count": 0,
+    "unique_packages": [
+        "jquery:3.7.1",
+        "jasmine-core:4.6.1",
+        "mocha:10.7.3"
+    ],
+    "mend_detection_expectations": {
+        "all_packages_must_appear": true,
+        "source_for_all": "registry",
+        "no_missing_transitives": true,
+        "flat_layout": true,
+        "parent_chain_inference_required": false,
+        "resolutions_field_used": false,
+        "lockfile_present": false,
+        "bower_components_committed": false,
+        "group_classification_required": true,
+        "failure_modes_exercised": [
+            "jquery reported in dev group instead of main",
+            "jasmine-core or mocha reported in main group instead of dev",
+            "devDependencies silently dropped (dev packages not reported at all)",
+            "transitive devDependencies of jasmine-core or mocha incorrectly included in tree",
+            "bower.json not detected (no lockfile — manifest-only detection required)"
+        ]
+    }
+}
